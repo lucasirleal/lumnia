@@ -39,15 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 848642643
+    locked: 0
+  - name: Background Particles
+    uniqueID: 2868862341
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: MG_Ground
+  - name: Tree Tops
     uniqueID: 46457
-    locked: 0
-  - name: MG_Water
-    uniqueID: 92866
-    locked: 0
-  - name: MG_Objects
-    uniqueID: 23963
     locked: 0
