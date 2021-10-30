@@ -47,9 +47,9 @@ namespace MapGenerator.UnityPort
         {
             EditorGUILayout.LabelField("Size", EditorStyles.boldLabel);
             mapGenerator.width = EditorGUILayout.IntSlider(new GUIContent("Width", "Count of tiles in the X axis."),
-                                                           mapGenerator.width, 10, 300);
+                                                           mapGenerator.width, 10, 900);
             mapGenerator.height = EditorGUILayout.IntSlider(new GUIContent("Height", "Count of tiles in the Y axis."),
-                                                            mapGenerator.height, 10, 300);         
+                                                            mapGenerator.height, 10, 900);         
         }
 
         private void DrawNoiseMapsParametersSection()

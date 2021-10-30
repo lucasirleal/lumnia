@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using MapGenerator.Generator;
+using MapGenerator.DataModels;
+
+/// <summary>
+/// Handles the entire proccess of creating a new world.
+/// </summary>
+public class WorldGeneration : MonoBehaviour
+{
+    [System.Serializable]
+    public WaterBiomModel[] waterBiomes;
+    public BiomModel[,] biomes;
+
+    public WaterNoiseMapParametersModel waterNoiseMapParameters;
+    public GroundNoiseMapParametersModel heightNoiseMapParameters;
+    public GroundNoiseMapParametersModel temperatureNoiseMapParameters;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Generator gen = new Generator(200, 200, 123123123, waterBiomes, biomes, waterNoiseMapParameters, heightNoiseMapParameters, temperatureNoiseMapParameters);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

@@ -75,10 +75,13 @@ namespace MapGenerator.UnityPort
             generator.Generate();
             Map = generator.Map;
 
-            foreach (Tile item in Map.Map)
-            {
-                Debug.Log(item.GetBiomModel().biomName);
-            }
+            ISpaceOrientation spaceOrientation = new SpaceOrientationFactory().GetSpaceOrientation(orientationType);
+
+            IGraphicalMapGenerator graphicalMapGenerator = new GraphicalMapGeneratorFactory().GetGraphicalMapGenerator(generationType, spaceOrientation);
+            graphicalMapGenerator.Render(transform, generator.Map);
+
+            ObjectsGenerator objectsGenerator = new ObjectsGenerator(spaceOrientation);
+            objectsGenerator.Render(transform, generator.AwaitingObjects);
         }  
 
         public IEnumerable<ValidationError> Validate()

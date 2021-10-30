@@ -42,6 +42,9 @@ TagManager:
   - name: Ground
     uniqueID: 848642643
     locked: 0
+  - name: Ground Decorations
+    uniqueID: 3811464661
+    locked: 0
   - name: Background Particles
     uniqueID: 2868862341
     locked: 0
@@ -50,4 +53,13 @@ TagManager:
     locked: 0
   - name: Tree Tops
     uniqueID: 46457
+    locked: 0
+  - name: MG_Ground
+    uniqueID: 36086
+    locked: 0
+  - name: MG_Water
+    uniqueID: 45206
+    locked: 0
+  - name: MG_Objects
+    uniqueID: 20866
     locked: 0

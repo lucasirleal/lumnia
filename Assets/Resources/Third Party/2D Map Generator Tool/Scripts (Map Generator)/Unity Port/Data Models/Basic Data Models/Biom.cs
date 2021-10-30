@@ -7,7 +7,6 @@ namespace MapGenerator.UnityPort
     [CreateAssetMenu(menuName = "Map Generator/Biom Data")]
     public class Biom : ScriptableObject, IDataModelValidation
     {
-        public string biomName;
         public Sprite ground;
 
         [Range(0, 100)]
@@ -27,7 +26,6 @@ namespace MapGenerator.UnityPort
             return new DataModels.BiomModel
             {
                 Ground = new DataModels.AbstractObjectModel() { AbstractObject = ground },
-                biomName = biomName,
                 TreesIntensity = treesIntensity,
                 Trees = trees.Select(t => t.ToModel()).ToList(),
                 ObjectsIntensity = objectsIntensity,

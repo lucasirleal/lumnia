@@ -10,14 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4295223806170772388}
   - component: {fileID: 4701359850178654295}
-  - component: {fileID: 1281630415702217884}
   - component: {fileID: 7004787073969983988}
   m_Layer: 0
   m_Name: Dead Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4295223806170772388
 Transform:
@@ -84,72 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1281630415702217884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2801606124778793764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 0000000079b50000c26a01009b5d000053429532
-  m_ShapePath:
-  - {x: -0.18668169, y: 0.006596178, z: 0}
-  - {x: 0.25265098, y: 0.0064698756, z: 0}
-  - {x: 0.25924712, y: 0.12520102, z: 0}
-  - {x: 0.1965835, y: 0.12190291, z: 0}
-  - {x: 0.18668923, y: 0.2571245, z: 0}
-  - {x: 0.30871844, y: 0.2637207, z: 0}
-  - {x: 0.3252089, y: 0.32308626, z: 0}
-  - {x: 0.38127637, y: 0.32308626, z: 0}
-  - {x: 0.3779783, y: 0.37915373, z: 0}
-  - {x: 0.4307477, y: 0.37915373, z: 0}
-  - {x: 0.4505362, y: 0.5671447, z: 0}
-  - {x: 0.3219108, y: 0.5671447, z: 0}
-  - {x: 0.3219108, y: 0.49788487, z: 0}
-  - {x: 0.18998733, y: 0.501183, z: 0}
-  - {x: 0.19328542, y: 0.7518376, z: 0}
-  - {x: 0.31201655, y: 0.75513566, z: 0}
-  - {x: 0.31531462, y: 0.8210974, z: 0}
-  - {x: 0.37467268, y: 0.81792563, z: 0}
-  - {x: 0.37467265, y: 0.9406344, z: 0}
-  - {x: 0.18998733, y: 0.93323237, z: 0}
-  - {x: 0.19328542, y: 0.87056875, z: 0}
-  - {x: 0.12072748, y: 0.87386686, z: 0}
-  - {x: 0.124025576, y: 0.8177993, z: 0}
-  - {x: -0.057369232, y: 0.8112031, z: 0}
-  - {x: -0.06066732, y: 0.87716496, z: 0}
-  - {x: -0.12003289, y: 0.87716496, z: 0}
-  - {x: -0.12662905, y: 0.9398286, z: 0}
-  - {x: -0.2519564, y: 0.9398286, z: 0}
-  - {x: -0.25525448, y: 0.8145013, z: 0}
-  - {x: -0.18599463, y: 0.8145013, z: 0}
-  - {x: -0.18929273, y: 0.7584338, z: 0}
-  - {x: -0.12003289, y: 0.7485395, z: 0}
-  - {x: -0.1167348, y: 0.62651026, z: 0}
-  - {x: -0.31132197, y: 0.62980837, z: 0}
-  - {x: -0.32121623, y: 0.69577014, z: 0}
-  - {x: -0.43074018, y: 0.6932779, z: 0}
-  - {x: -0.43994737, y: 0.501183, z: 0}
-  - {x: -0.3805818, y: 0.501183, z: 0}
-  - {x: -0.37728372, y: 0.44511548, z: 0}
-  - {x: -0.31132197, y: 0.4418174, z: 0}
-  - {x: -0.31132197, y: 0.37585565, z: 0}
-  - {x: -0.12662905, y: 0.37915373, z: 0}
-  - {x: -0.12662905, y: 0.11860484, z: 0}
-  - {x: -0.17939848, y: 0.11200866, z: 0}
-  m_ShapePathHash: 1214262416
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -115630
 --- !u!114 &7004787073969983988
 MonoBehaviour:
   m_ObjectHideFlags: 0

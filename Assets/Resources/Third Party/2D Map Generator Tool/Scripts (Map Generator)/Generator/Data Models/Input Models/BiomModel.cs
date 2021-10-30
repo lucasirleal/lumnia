@@ -4,8 +4,6 @@ namespace MapGenerator.DataModels
 {
     public class BiomModel
     {
-        public string biomName { get; set; }
-
         public AbstractObjectModel Ground { get; set; }
 
         public float TreesIntensity { get; set; }

@@ -32,7 +32,7 @@ namespace MapGenerator.Generator
             this.temperatureNoiseMapParameters = temperatureNoiseMapParameters;
 
             random = new Random(seed);
-            Map = new TilesMap(400, 400);
+            Map = new TilesMap(width, height);
         }
 
         public void Generate()
@@ -48,6 +48,9 @@ namespace MapGenerator.Generator
 
             WaterMapSmoother waterMapSmoother = new WaterMapSmoother(waterBiomes);
             waterMapSmoother.SmoothWaterMap(Map);
+
+            ObjectGenerator objectGenerator = new ObjectGenerator(Map, random);
+            AwaitingObjects = objectGenerator.Generate();
         }
     }
 }

@@ -35,6 +35,42 @@ TextureImporter:
   - first:
       213: -8049741531878901084
     second: RockyGrassTIle
+  - first:
+      213: -8413060031499241702
+    second: WaterTile_1
+  - first:
+      213: 7422330087579933422
+    second: WaterTile_2
+  - first:
+      213: 2002485112459718284
+    second: WaterRock_1
+  - first:
+      213: -1275831690435379319
+    second: WaterRock_2
+  - first:
+      213: 329727896566720165
+    second: WaterRock_3
+  - first:
+      213: 7412320156082737785
+    second: WaterRock_4
+  - first:
+      213: -2097224967589414909
+    second: WaterRock_5
+  - first:
+      213: 8140123880437787944
+    second: WaterRock_6
+  - first:
+      213: 2438393261465058855
+    second: BlueFlower
+  - first:
+      213: 6030144671638036906
+    second: RedFlower
+  - first:
+      213: -3571917874221884252
+    second: PurpleFlower
+  - first:
+      213: -5026170667327611896
+    second: WhiteFlower
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -342,7 +378,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -350,6 +386,258 @@ TextureImporter:
       bones: []
       spriteID: 4aa36a2e9b2994090800000000000000
       internalID: -8049741531878901084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterTile_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a177374c97ece3b80800000000000000
+      internalID: -8413060031499241702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterTile_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 510
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea55e3b3e9610760800000000000000
+      internalID: 7422330087579933422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterRock_1
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 119
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e6b24a9914acb10800000000000000
+      internalID: 2002485112459718284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterRock_2
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 119
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fb96256d55b4ee0800000000000000
+      internalID: -1275831690435379319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterRock_3
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 119
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6656366cd639400800000000000000
+      internalID: 329727896566720165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterRock_4
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97297c8e8e9ddd660800000000000000
+      internalID: 7412320156082737785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterRock_5
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308b0c8e00925e2e0800000000000000
+      internalID: -2097224967589414909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterRock_6
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d2b218a8787f070800000000000000
+      internalID: 8140123880437787944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueFlower
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 357
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72eb45c80c9e6d120800000000000000
+      internalID: 2438393261465058855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlower
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 357
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1233931a06fa350800000000000000
+      internalID: 6030144671638036906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PurpleFlower
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 357
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acd2244e9ffd6ec0800000000000000
+      internalID: -3571917874221884252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteFlower
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 357
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c137968647f3ab0800000000000000
+      internalID: -5026170667327611896
       vertices: []
       indices: 
       edges: []
