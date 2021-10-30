@@ -54,12 +54,6 @@ TagManager:
   - name: Tree Tops
     uniqueID: 46457
     locked: 0
-  - name: MG_Ground
-    uniqueID: 36086
-    locked: 0
-  - name: MG_Water
-    uniqueID: 45206
-    locked: 0
-  - name: MG_Objects
-    uniqueID: 20866
+  - name: Top Particles
+    uniqueID: 2569108141
     locked: 0

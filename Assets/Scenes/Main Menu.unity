@@ -845,7 +845,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 848642643
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_Color: {r: 0.85957, g: 0.740566, b: 1, a: 1}
   m_Intensity: 0.2
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 534295320000000079b50000
+  m_ApplyToSortingLayers: 53429532d5552ee3855dffaa0000000079b50000f68c000096b0000082510000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -1431,6 +1431,34 @@ PrefabInstance:
     - target: {fileID: 3036696497633909327, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036696498152475758, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036696498152475758, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[1]
+      value: -483502635
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036696498152475758, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[2]
+      value: -1426104955
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036696498152475758, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[4]
+      value: 46457
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036696498152475758, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[5]
+      value: 36086
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036696498152475758, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[6]
+      value: 45206
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036696498152475758, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[7]
+      value: 20866
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e7ab6124b11db24790989c62b675a8e, type: 3}
