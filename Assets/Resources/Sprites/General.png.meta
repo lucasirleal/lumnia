@@ -71,6 +71,9 @@ TextureImporter:
   - first:
       213: -5026170667327611896
     second: WhiteFlower
+  - first:
+      213: 2958444561792577813
+    second: Sack_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -638,6 +641,27 @@ TextureImporter:
       bones: []
       spriteID: 80c137968647f3ab0800000000000000
       internalID: -5026170667327611896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sack_1
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 476
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511355987a18e0920800000000000000
+      internalID: 2958444561792577813
       vertices: []
       indices: 
       edges: []
