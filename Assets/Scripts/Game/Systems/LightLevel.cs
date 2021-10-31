@@ -14,6 +14,7 @@ public class LightLevel : MonoBehaviour
     public float currentLight;
     public float decayVelocity;
     public float rechargeVelocity;
+    public int currentWave;
     [Header("References")]
     public LightLevelDisplay display;
 
@@ -35,6 +36,10 @@ public class LightLevel : MonoBehaviour
 
         display.UpdateLightLevel(maxLight, currentLight);
 
-        if (currentLight <= 0f) { isCharging = true; }
+        if (currentLight <= 0f) { 
+            isCharging = true; 
+            currentWave++;
+            FindObjectOfType<EnemySpawner>().StartWave(currentWave, maxLight / rechargeVelocity);
+        }
     }
 }
