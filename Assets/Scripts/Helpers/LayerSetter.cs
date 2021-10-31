@@ -9,6 +9,7 @@ public class LayerSetter : MonoBehaviour
 {
     [Header("Settings")]
     public bool autoDestroy = true;
+    public int offset;
 
     private SpriteRenderer spriteRenderer;
     private Vector2 lastPositionCheck;
@@ -33,7 +34,7 @@ public class LayerSetter : MonoBehaviour
     /// </summary>
     private void CalculateOrder()
     {
-        spriteRenderer.sortingOrder = (int)-(transform.position.y * 100f);
+        spriteRenderer.sortingOrder = (int)-((transform.position.y * 100f) + offset);
         lastPositionCheck = transform.position;
     }
 }

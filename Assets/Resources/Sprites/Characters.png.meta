@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 3542127132570728493
     second: Skin_0
+  - first:
+      213: -1960546628078278901
+    second: EnemySkin_1
+  - first:
+      213: 8248543377919322394
+    second: FireStaff_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,6 +116,48 @@ TextureImporter:
       bones: []
       spriteID: d28b62e2cd9282130800000000000000
       internalID: 3542127132570728493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySkin_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07edcbaa3dbac4e0800000000000000
+      internalID: -1960546628078278901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireStaff_1
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 187
+        width: 4
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a192843ef76b87270800000000000000
+      internalID: 8248543377919322394
       vertices: []
       indices: 
       edges: []
