@@ -46,7 +46,7 @@ public class SimpleProjectile : MonoBehaviour
                 foreach (Transform item in enemies.spawnedEnemies.ToArray())
                 {
                     if (item == null || item.gameObject == null) continue;
-                    if (Vector2.Distance(transform.position, item.position) <= 0.5f) forceReached = true;
+                    if (Vector2.Distance(transform.position, item.position) <= 1f) forceReached = true;
                     break;
                 }
             }

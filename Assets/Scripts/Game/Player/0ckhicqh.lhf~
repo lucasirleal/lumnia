@@ -38,7 +38,7 @@ public class PlayerStatus : MonoBehaviour
     /// <param name="amount">The amount.</param>
     public void UpdateHealth(float amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth + amount, -0.5f, maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         healthSlider.value = currentHealth;
 
         if (amount < 0) playerDamageAnimator.SetTrigger("Take Damage");

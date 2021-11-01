@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls all basic ations from the main menu's buttons.
@@ -21,7 +22,8 @@ public class MenuActions : MonoBehaviour
     private IEnumerator FadeAndLoad()
     {
         ScreenFade.FadeIn();
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(3f);
+        SceneManager.LoadScene("Game");
     }
 
     /// <summary>
