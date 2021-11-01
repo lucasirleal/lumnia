@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8412552902700538724}
   - component: {fileID: -792780138289926157}
   - component: {fileID: 5473659953203065631}
+  - component: {fileID: 1685489849495438283}
+  - component: {fileID: -2372083629564746569}
   m_Layer: 0
   m_Name: Simple Fire Ball
   m_TagString: Untagged
@@ -4728,7 +4730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f03f416a9bd9143ac75b79fc73f263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldStopMidway: 0
+  shouldStopMidway: 1
   projectileSpeed: 10
   explosionKick: 5
   explosionParticles: {fileID: 3446653252424473726, guid: 78dc5aac5e8f92243979f946f4ac6924, type: 3}
@@ -4746,6 +4748,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
+--- !u!58 &1685489849495438283
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412552902682065826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.033667535, y: -3985839.8}
+  serializedVersion: 2
+  m_Radius: 1.0473467
+--- !u!50 &-2372083629564746569
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412552902682065826}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &8412552902682065828
 GameObject:
   m_ObjectHideFlags: 0

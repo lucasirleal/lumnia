@@ -18,24 +18,20 @@ public class SimpleProjectile : MonoBehaviour
     private bool forceReached;
     private Vector2 target;
     private bool isEnemy;
-    private int damage;
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!shouldStopMidway || isEnemy) return;
-        forceReached = true;
-    }
+    private float damage;
+    private EnemySpawner enemies;
 
     /// <summary>
     /// Constructs the projectile.
     /// </summary>
     /// <param name="target">Where should it land.</param>
     /// <param name="isEnemyProjectile">Was it created by an enemy? (If true, only damages the player.)</param>
-    public void Construct(Vector2 target, bool isEnemyProjectile, int damage)
+    public void Construct(Vector2 target, bool isEnemyProjectile, float damage)
     {
         this.target = target;
         this.isEnemy = isEnemyProjectile;
         this.damage = damage;
+        enemies = FindObjectOfType<EnemySpawner>();
         StartCoroutine("Action");
     }
 
@@ -44,6 +40,17 @@ public class SimpleProjectile : MonoBehaviour
         while (!forceReached && Vector2.Distance(transform.position, target) >= 0.2f)
         {
             transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * projectileSpeed);
+
+            if (!isEnemy && shouldStopMidway)
+            {
+                foreach (Transform item in enemies.spawnedEnemies.ToArray())
+                {
+                    if (item == null || item.gameObject == null) continue;
+                    if (Vector2.Distance(transform.position, item.position) <= 0.5f) forceReached = true;
+                    break;
+                }
+            }
+
             yield return null;
         }
 
@@ -58,6 +65,7 @@ public class SimpleProjectile : MonoBehaviour
         Destroy(Instantiate(explosionParticles, transform.position, Quaternion.identity).gameObject, 3f);
 
         if (isEnemy) CalculateExplosionForEnemy();
+        else CalculateExplosionForPlayer();
 
         Destroy(this.gameObject);
     }
@@ -75,5 +83,21 @@ public class SimpleProjectile : MonoBehaviour
         Vector2 direction = (player.position - transform.position).normalized;
         player.GetComponent<Rigidbody2D>().AddForce(direction * explosionKick, ForceMode2D.Impulse);
         player.GetComponent<PlayerStatus>().UpdateHealth(-damage);
+    }
+
+    /// <summary>
+    /// Creates a force that pushes all enemies based on its distance.
+    /// </summary>
+    private void CalculateExplosionForPlayer()
+    {
+        foreach (Transform item in enemies.spawnedEnemies.ToArray())
+        {
+            if (item == null || item.gameObject == null || (!item.GetComponent<Rigidbody2D>() || !item.GetComponent<EnemyStatus>())) continue;
+            if (Vector2.Distance(transform.position, item.position) > areaOfEffect) continue;
+
+            Vector2 direction = (item.position - transform.position).normalized;
+            item.GetComponent<Rigidbody2D>().AddForce(direction * explosionKick, ForceMode2D.Impulse);
+            item.GetComponent<EnemyStatus>().UpdateHealth(-damage);
+        }
     }
 }

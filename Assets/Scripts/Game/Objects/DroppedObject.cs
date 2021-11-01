@@ -15,6 +15,8 @@ public class DroppedObject : MonoBehaviour
     private Transform player;
     private Inventory inventory;
 
+    private bool released = false;
+
     public void Construct(Item item, int amount, Color labelColor)
     {
         player = FindObjectOfType<PlayerMovement>().transform;
@@ -30,11 +32,30 @@ public class DroppedObject : MonoBehaviour
         label.GetComponent<TextMeshProUGUI>().text = "x" + amount + " " + item.itemName;
         label.GetComponent<TextMeshProUGUI>().color = labelColor;
         label.position = (Vector2)transform.position + new Vector2(0f, 1f);
+
+        StartCoroutine("Animation");
+    }
+
+    private IEnumerator Animation()
+    {
+        Rigidbody2D body = GetComponent<Rigidbody2D>();
+        float originalY = transform.position.y;
+
+        body.AddForce(new Vector2(Random.Range(-2f, 2f), 5f), ForceMode2D.Impulse);
+
+        yield return new WaitUntil(() => transform.position.y < originalY - 0.1f);
+
+        body.velocity = Vector2.zero;
+        body.gravityScale = 0f;
+
+        released = true;
     }
 
     private void Update()
     {
         label.transform.position = (Vector2)transform.position + new Vector2(0f, 1f);
+
+        if (!released) return;
 
         float distance = Vector2.Distance(player.position, transform.position);
 

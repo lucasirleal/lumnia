@@ -19,6 +19,8 @@ public class Inventory : MonoBehaviour
     public TextMeshProUGUI inventoryExamineTitle;
     public TextMeshProUGUI inventoryExamineDescription;
     public Image inventoryExamineIcon;
+    [Header("Icon References")]
+    public Texture2D equipIcon;
     [Header("Dropped items references")]
     public Transform droppedItemPrefab;
     [Header("Color References")]
@@ -30,9 +32,12 @@ public class Inventory : MonoBehaviour
 
     private List<InventorySlot> slots;
     private Dictionary<string, Item> loadedItems;
+    private PlayerItems equipmentHandler;
 
     private void Start()
     {
+        equipmentHandler = FindObjectOfType<PlayerItems>();
+
         LoadItems();
         slots = new List<InventorySlot>();
 
@@ -115,10 +120,43 @@ public class Inventory : MonoBehaviour
             exit.eventID = EventTriggerType.PointerExit;
             exit.callback.AddListener((eventData) => { HideExamine(); });
 
+            EventTrigger.Entry click = new EventTrigger.Entry();
+            click.eventID = EventTriggerType.PointerDown;
+            click.callback.AddListener((eventData) => { RegisterClick(clone.gameObject); });
+
             trigger.triggers.Add(enter);
             trigger.triggers.Add(exit);
+            trigger.triggers.Add(click);
 
             slots.Add(new InventorySlot(clone.gameObject));
+        }
+    }
+
+    /// <summary>
+    /// Called whenever a player clicks on an item.
+    /// </summary>
+    /// <param name="prefab">The inventory slot UI hook.</param>
+    public void RegisterClick(GameObject prefab)
+    {
+        int index = slots.IndexOf(slots.Find((x) => x.uiHook == prefab));
+
+        if (index < 0 || index >= slots.Count) return;
+
+        Item item = slots[index].item;
+
+        if (item == null) return;
+
+        switch (item.click)
+        {
+            case Item.LeftClickDefault.Equip:
+                Item returnItem = equipmentHandler.EquipItem(item);
+                ForceRemoveItem(index);
+                TryAddItem(returnItem, 1);
+                HideExamine();
+                ExamineItem(prefab);
+                break;
+            default:
+                return;
         }
     }
 
@@ -141,6 +179,15 @@ public class Inventory : MonoBehaviour
         inventoryExamineDescription.text = item.description;
 
         inventoryExamineHolder.SetActive(true);
+
+        switch (item.click)
+        {
+            case Item.LeftClickDefault.Equip:
+                Cursor.SetCursor(equipIcon, Vector2.zero, CursorMode.Auto);
+                break;
+            default:
+                break;
+        }
     }
 
     /// <summary>
@@ -149,6 +196,7 @@ public class Inventory : MonoBehaviour
     public void HideExamine()
     {
         inventoryExamineHolder.SetActive(false);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     /// <summary>
@@ -176,6 +224,8 @@ public class Inventory : MonoBehaviour
     /// <returns>True if it was added.</returns>
     public bool TryAddItem(Item item, int amount)
     {
+        if (item == null) return false;
+
         foreach (InventorySlot slot in slots)
         {
             if (slot.item == item && slot.amount + amount <= item.maxStack)
@@ -218,5 +268,18 @@ public class Inventory : MonoBehaviour
             slot.uiHook.transform.GetChild(0).GetComponent<Image>().color = Color.white;
             slot.uiHook.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "" + slot.amount;
         }
+    }
+
+    /// <summary>
+    /// Forcibly removes an item from the inventory.
+    /// </summary>
+    /// <param name="slot">The slot index.</param>
+    private void ForceRemoveItem(int slot)
+    {
+        if (slot < 0 || slot >= slots.Count) return;
+
+        slots[slot].item = null;
+
+        UpdateVisuals();
     }
 }

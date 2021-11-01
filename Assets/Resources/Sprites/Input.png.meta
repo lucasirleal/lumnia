@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: c912757528d930c498eac65be8ff0c39
+guid: 788ad2882289b8d4d873e893d7a408f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3542127132570728493
-    second: Skin_0
+      213: -4441382260067031016
+    second: Input_RightHandClick
   - first:
-      213: -1960546628078278901
-    second: EnemySkin_1
-  - first:
-      213: 8248543377919322394
-    second: FireStaff_1
-  - first:
-      213: 57365866442116020
-    second: EquipIcon
+      213: 2310105641291913486
+    second: Input_F
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,11 +97,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skin_0
+      name: Input_RightHandClick
       rect:
         serializedVersion: 2
-        x: 0
-        y: 170
+        x: 102
+        y: 104
         width: 16
         height: 16
       alignment: 7
@@ -117,18 +111,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d28b62e2cd9282130800000000000000
-      internalID: 3542127132570728493
+      spriteID: 818abfcad5a0d52c0800000000000000
+      internalID: -4441382260067031016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemySkin_1
+      name: Input_F
       rect:
         serializedVersion: 2
-        x: 0
-        y: 136
+        x: 357
+        y: 342
         width: 16
         height: 16
       alignment: 7
@@ -138,29 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b07edcbaa3dbac4e0800000000000000
-      internalID: -1960546628078278901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FireStaff_1
-      rect:
-        serializedVersion: 2
-        x: 732
-        y: 187
-        width: 4
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a192843ef76b87270800000000000000
-      internalID: 8248543377919322394
+      spriteID: e0994de57d42f0020800000000000000
+      internalID: 2310105641291913486
       vertices: []
       indices: 
       edges: []

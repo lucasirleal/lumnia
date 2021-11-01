@@ -108,8 +108,11 @@ GameObject:
   - component: {fileID: 4823647643609138784}
   - component: {fileID: 4823647643609138786}
   - component: {fileID: 4823647643609138785}
+  - component: {fileID: 6750376650067181259}
   - component: {fileID: 4823647643609139103}
   - component: {fileID: 4823647643609138787}
+  - component: {fileID: 3618750157142437130}
+  - component: {fileID: 1062349188866446940}
   m_Layer: 0
   m_Name: Weak Fire Mage
   m_TagString: Untagged
@@ -152,8 +155,8 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &4823647643609138785
 BoxCollider2D:
@@ -181,6 +184,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.62268806, y: 0.101881206}
   m_EdgeRadius: 0
+--- !u!58 &6750376650067181259
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823647643609139102}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.4756546}
+  serializedVersion: 2
+  m_Radius: 0.57831573
 --- !u!114 &4823647643609139103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +233,7 @@ MonoBehaviour:
         m_CallState: 2
   player: {fileID: 0}
   actorRB: {fileID: 4823647643609138786}
-  actorAnimator: {fileID: 4823647644475935185}
+  actorAnimator: {fileID: 1062349188866446940}
 --- !u!114 &4823647643609138787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +249,6 @@ MonoBehaviour:
   chargingTime: 3
   attackResetTimer: 5
   maxPrecisionDeviance: 1
-  damage: 20
   projectileSpawnOffset: {x: 0.3, y: 0.6}
   type: 0
   player: {fileID: 0}
@@ -251,6 +269,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  statusHandler: {fileID: 3618750157142437130}
+--- !u!114 &3618750157142437130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823647643609139102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e98cc477b266c4cbbf306b5d1fd2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 70
+  damageReduction: 0
+  damage: 20
+  worldHealthbarPrefab: {fileID: 3349442478564957947, guid: ff3f258acf541c94f95edc93fd958216, type: 3}
+  worldHealthbarHolder: {fileID: 0}
+--- !u!95 &1062349188866446940
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823647643609139102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e41a3773e78340438eb3c163b0d0fe3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4823647644013806675
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +580,7 @@ Animator:
   m_GameObject: {fileID: 4823647644475935183}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1e41a3773e78340438eb3c163b0d0fe3, type: 2}
+  m_Controller: {fileID: 9100000, guid: b6c9abd224957b543846c35449e284a0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

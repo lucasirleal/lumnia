@@ -13,7 +13,6 @@ public class ChargeMageAttackAI : MonoBehaviour
     public float chargingTime;
     public float attackResetTimer;
     public float maxPrecisionDeviance;
-    public int damage;
     public Vector2 projectileSpawnOffset;
     public ProjectileType type;
     [Header("References")]
@@ -21,6 +20,7 @@ public class ChargeMageAttackAI : MonoBehaviour
     public GameObject chargingDisplay;
     public Transform projectilePrefab;
     public UnityEvent attackFinishedCallback;
+    public EnemyStatus statusHandler;
 
     public enum ProjectileType
     {
@@ -70,7 +70,7 @@ public class ChargeMageAttackAI : MonoBehaviour
         switch (type)
         {
             case ProjectileType.SimpleFireBall:
-                clone.GetComponent<SimpleProjectile>().Construct(GetTarget(), true, damage);
+                clone.GetComponent<SimpleProjectile>().Construct(GetTarget(), true, statusHandler.damage);
                 break;
             default:
                 break;

@@ -29,10 +29,11 @@ public class PlayerMovement : MonoBehaviour
         // Running input.
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            if (playerStatus.currentStamina == 0 || staminaRecharging) return;
-
-            inputVelocity = new Vector2(inputVelocity.x * runningVelocityMultiplier, inputVelocity.y * runningVelocityMultiplier);
-            playerStatus.UpdateStamina(-(Time.deltaTime * staminaDrainVelocity));
+            if (playerStatus.currentStamina != 0 && !staminaRecharging)
+            {
+                inputVelocity = new Vector2(inputVelocity.x * runningVelocityMultiplier, inputVelocity.y * runningVelocityMultiplier);
+                playerStatus.UpdateStamina(-(Time.deltaTime * staminaDrainVelocity));
+            }
         }
         else if (!staminaRecharging)
         {

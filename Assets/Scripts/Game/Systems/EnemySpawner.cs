@@ -9,6 +9,12 @@ public class EnemySpawner : MonoBehaviour
 {
     [Header("Waves")]
     public List<EnemyWave> waves;
+    public List<Transform> spawnedEnemies;
+
+    private void Start()
+    {
+        spawnedEnemies = new List<Transform>();
+    }
 
     /// <summary>
     /// Starts a wave with evenly spread spawn timers.
@@ -48,7 +54,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector2 position = GetSpawnPosition();
 
-        Instantiate(enemy, position, Quaternion.identity);
+        spawnedEnemies.Add(Instantiate(enemy, position, Quaternion.identity));
     }
 
     /// <summary>

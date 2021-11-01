@@ -74,6 +74,9 @@ TextureImporter:
   - first:
       213: 2958444561792577813
     second: Sack_1
+  - first:
+      213: 6360820135067221728
+    second: OpenSmallChest_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -662,6 +665,27 @@ TextureImporter:
       bones: []
       spriteID: 511355987a18e0920800000000000000
       internalID: 2958444561792577813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenSmallChest_1
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 323
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee75d6363c264850800000000000000
+      internalID: 6360820135067221728
       vertices: []
       indices: 
       edges: []
