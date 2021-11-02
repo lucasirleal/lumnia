@@ -187,7 +187,10 @@ public class WorldGenerator : MonoBehaviour
             else if (item.biome == WorldTile.Biome.Forest)
             {
                 SpawnableObject targetObject = GetObjectToSpawn(forestBiomeObjects);
-                if (targetObject != null) { Instantiate(targetObject.prefab, (Vector2)item.position + offset, Quaternion.identity, targetObject.parentHolder); }
+                if (targetObject == null) continue;
+
+                Transform clone = Instantiate(targetObject.prefab, (Vector2)item.position + offset, Quaternion.identity, targetObject.parentHolder);
+                WorldData.StoreObject(new WorldObject(clone.gameObject, targetObject.destroyableOnPlaceOver), item.position);
             }
         }
     }

@@ -907,6 +907,7 @@ GameObject:
   - component: {fileID: 323155112}
   - component: {fileID: 323155114}
   - component: {fileID: 323155115}
+  - component: {fileID: 323155116}
   m_Layer: 0
   m_Name: Other Systems
   m_TagString: Untagged
@@ -992,6 +993,21 @@ MonoBehaviour:
   rareColor: {r: 1, g: 0.81512964, b: 0.3820755, a: 1}
   legendaryColor: {r: 0.2216981, g: 0.7005464, b: 1, a: 1}
   epicColor: {r: 0.77447283, g: 0.4009434, b: 1, a: 1}
+--- !u!114 &323155116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323155111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e77a498bfac3b44a42e8b70d1e3b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successColor: {r: 0, g: 1, b: 0.2929263, a: 1}
+  errorColor: {r: 1, g: 0.051016845, b: 0, a: 1}
+  currentObjectBeingPlaced: {fileID: 0}
 --- !u!1 &369643144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,7 +2584,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.15
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 53429532d5552ee3855dffaa0000000079b50000f68c000096b0000082510000
   m_LightCookieSprite: {fileID: 0}
@@ -3013,46 +3029,60 @@ MonoBehaviour:
   - prefab: {fileID: 2375103240399705611, guid: 77fd923a086fced4cb71f468722246b5, type: 3}
     parentHolder: {fileID: 1896725681}
     chanceToSpawn: 0.1
+    destroyableOnPlaceOver: 0
   - prefab: {fileID: 6163469207897979094, guid: 31cd80408cbeec1489400e31646a435b, type: 3}
     parentHolder: {fileID: 1896725681}
     chanceToSpawn: 0.1
+    destroyableOnPlaceOver: 0
   - prefab: {fileID: 8694823555755425350, guid: cf5cc9dff0446344babd8e2d33a00b53, type: 3}
     parentHolder: {fileID: 1896725681}
     chanceToSpawn: 0.1
+    destroyableOnPlaceOver: 0
   - prefab: {fileID: 2890078006537458798, guid: b6d83a264a014fe4eb52ae4809d7251b, type: 3}
     parentHolder: {fileID: 1896725681}
     chanceToSpawn: 0.1
+    destroyableOnPlaceOver: 0
   - prefab: {fileID: 3473133202165524037, guid: c129297701a1f9841b9a6b2508462534, type: 3}
     parentHolder: {fileID: 1896725681}
     chanceToSpawn: 0.1
+    destroyableOnPlaceOver: 0
   - prefab: {fileID: 3152417999851554765, guid: f4feb2368f7ac0240a9d28fbfa1f91ff, type: 3}
     parentHolder: {fileID: 1896725681}
     chanceToSpawn: 0.1
+    destroyableOnPlaceOver: 0
   forestBiomeObjects:
   - prefab: {fileID: 3934146039082202809, guid: f22c66b1c7f1cdb4f9b96141b584019e, type: 3}
     parentHolder: {fileID: 436699461}
     chanceToSpawn: 10
+    destroyableOnPlaceOver: 0
   - prefab: {fileID: 4295223806170772388, guid: d3a0097fd4ff8c649ad7a62e4bcc3dd2, type: 3}
     parentHolder: {fileID: 436699461}
     chanceToSpawn: 3
+    destroyableOnPlaceOver: 0
   - prefab: {fileID: 8224749420441613968, guid: d6da7a6ce23ddc047888e970bffbd7bc, type: 3}
     parentHolder: {fileID: 404032047}
     chanceToSpawn: 20
+    destroyableOnPlaceOver: 1
   - prefab: {fileID: 2723762104088204962, guid: 77261ff5a59560842b43770e20b88bb9, type: 3}
     parentHolder: {fileID: 404032047}
     chanceToSpawn: 20
+    destroyableOnPlaceOver: 1
   - prefab: {fileID: 2176598018975264868, guid: 5af31f4d44600d849a364e6edb7f2c2b, type: 3}
     parentHolder: {fileID: 404032047}
     chanceToSpawn: 1
+    destroyableOnPlaceOver: 1
   - prefab: {fileID: 5652435275718874992, guid: 206c105b58ed7bd4c900edb1d38f7760, type: 3}
     parentHolder: {fileID: 404032047}
     chanceToSpawn: 1
+    destroyableOnPlaceOver: 1
   - prefab: {fileID: 5346049912526957474, guid: 32e23cf6ef69ca24f89f52104faa67da, type: 3}
     parentHolder: {fileID: 404032047}
     chanceToSpawn: 1
+    destroyableOnPlaceOver: 1
   - prefab: {fileID: 3052380786842037878, guid: 2c202fb311bc7f342afd74d73c3fa04a, type: 3}
     parentHolder: {fileID: 404032047}
     chanceToSpawn: 1
+    destroyableOnPlaceOver: 1
   deepWaterTile: {fileID: 11400000, guid: 7faab1a58ba16b5458de7f783f788a09, type: 2}
   shallowWaterTile: {fileID: 11400000, guid: 7faab1a58ba16b5458de7f783f788a09, type: 2}
   forestTile: {fileID: 11400000, guid: 0bb5e10fba3be5c46afc88a807ae05e2, type: 2}
@@ -5287,13 +5317,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   drops:
-    minItems: 0
-    maxItems: 0
+    minRolls: 0
+    maxRolls: 0
     useMinMax: 0
     drops:
     - chance: 100
       item: {fileID: 11400000, guid: fcb9d75ee72d824408dd9ad75527f36a, type: 2}
-      amount: 1
+      useFixedAmount: 1
+      fixedAmount: 1
+      minAmount: 0
+      maxAmount: 0
+    - chance: 100
+      item: {fileID: 11400000, guid: bb6e097002cf3e24e93fee5fd97c2c13, type: 2}
+      useFixedAmount: 1
+      fixedAmount: 1
+      minAmount: 0
+      maxAmount: 0
   hintPrefab: {fileID: 3547730141561436853, guid: 993bcd371e8d586489d9fde31525e4ec, type: 3}
   hintCanvas: {fileID: 125137534}
   openedSprite: {fileID: 6360820135067221728, guid: fc52be6aa8f4cd54db3bc43eefbb4f38, type: 3}
@@ -24402,9 +24441,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 1
+  m_FalloffIntensity: 0.546
   m_Color: {r: 0.8490566, g: 0.66415155, b: 0.49261305, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.0054202
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 53429532d5552ee3855dffaa0000000079b50000f68c000096b0000082510000
   m_LightCookieSprite: {fileID: 0}

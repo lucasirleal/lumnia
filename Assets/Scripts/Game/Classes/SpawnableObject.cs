@@ -12,6 +12,7 @@ public class SpawnableObject
     public Transform parentHolder;
     [Range(0f, 100f)]
     public float chanceToSpawn;
+    public bool destroyableOnPlaceOver;
 
     /// <summary>
     /// Should this object be spawned?

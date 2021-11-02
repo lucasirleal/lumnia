@@ -33,10 +33,12 @@ public class Inventory : MonoBehaviour
     private List<InventorySlot> slots;
     private Dictionary<string, Item> loadedItems;
     private PlayerItems equipmentHandler;
+    private ObjectPlacement placementHandler;
 
     private void Start()
     {
         equipmentHandler = FindObjectOfType<PlayerItems>();
+        placementHandler = FindObjectOfType<ObjectPlacement>();
 
         LoadItems();
         slots = new List<InventorySlot>();
@@ -228,6 +230,9 @@ public class Inventory : MonoBehaviour
                 HideExamine();
                 ExamineItem(prefab);
                 break;
+            case Item.LeftClickDefault.Place:
+                placementHandler.TriggerPlace(item);
+                break;
             default:
                 return;
         }
@@ -354,5 +359,50 @@ public class Inventory : MonoBehaviour
         slots[slot].item = null;
 
         UpdateVisuals();
+    }
+
+    /// <summary>
+    /// Tries to remove an item.
+    /// </summary>
+    /// <param name="target">The item.</param>
+    /// <param name="amount">The amount to be removed.</param>
+    /// <returns>True if all the items were removed.</returns>
+    public bool RemoveItem(Item target, int amount)
+    {
+        // Validation first.
+        int amountValidated = amount;
+        foreach (InventorySlot item in slots)
+        {
+            if (item.item == target) amountValidated -= item.amount;
+
+            if (amountValidated <= 0) break;
+        }
+
+        if (amountValidated > 0) return false;
+
+        int amountToRemove = amount;
+        foreach (InventorySlot item in slots.ToArray())
+        {
+            if (item.item == target)
+            {
+                if (item.amount >= amountToRemove)
+                {
+                    item.amount -= amountToRemove;
+                    amountToRemove = 0;
+                }
+                else
+                {
+                    amountToRemove -= item.amount;
+                    item.amount = 0;
+                }
+
+                if (item.amount == 0) ForceRemoveItem(slots.IndexOf(item));
+
+                if (amountToRemove == 0) break;
+            }
+        }
+
+        UpdateVisuals();
+        return true;
     }
 }

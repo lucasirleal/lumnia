@@ -25,6 +25,9 @@ public class Item : ScriptableObject
     public MainAttackType attackType;
     public float mainAttackDelay;
     public float damage;
+    [Header("Placeable settings")]
+    public Transform worldObject;
+    public Transform draggableObject;
 
     public enum ItemRarity
     {
@@ -38,7 +41,7 @@ public class Item : ScriptableObject
 
     public enum LeftClickDefault
     {
-        None, Equip
+        None, Equip, Place
     }
 
     public enum EquipmentType
