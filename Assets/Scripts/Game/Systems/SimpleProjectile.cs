@@ -14,6 +14,7 @@ public class SimpleProjectile : MonoBehaviour
     public float explosionKick;
     public Transform explosionParticles;
     public float areaOfEffect;
+    public LayerMask objectDamageLayers;
 
     private bool forceReached;
     private Vector2 target;
@@ -67,6 +68,8 @@ public class SimpleProjectile : MonoBehaviour
         if (isEnemy) CalculateExplosionForEnemy();
         else CalculateExplosionForPlayer();
 
+        CalculateDamageToObjects();
+
         Destroy(this.gameObject);
     }
 
@@ -98,6 +101,22 @@ public class SimpleProjectile : MonoBehaviour
             Vector2 direction = (item.position - transform.position).normalized;
             item.GetComponent<Rigidbody2D>().AddForce(direction * explosionKick, ForceMode2D.Impulse);
             item.GetComponent<EnemyStatus>().UpdateHealth(-damage);
+        }
+    }
+
+    /// <summary>
+    /// Calculates damage to all nearby objects that can be damaged.
+    /// </summary>
+    private void CalculateDamageToObjects()
+    {
+        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, areaOfEffect, objectDamageLayers);
+        foreach (Collider2D item in cols)
+        {
+            Node node = item.GetComponent<Node>();
+
+            if (!node) continue;
+
+            node.UpdateHealth(-damage);
         }
     }
 }

@@ -9,8 +9,8 @@ using UnityEngine;
 public class LootTable
 {
     [Header("Data")]
-    public int minItems;
-    public int maxItems;
+    public int minRolls;
+    public int maxRolls;
     public bool useMinMax;
     public List<LootTableItem> drops;
 }

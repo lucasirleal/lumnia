@@ -11,5 +11,8 @@ public class LootTableItem
     [Range(0f, 100f)]
     public float chance;
     public Item item;
-    public int amount;
+    public bool useFixedAmount;
+    public int fixedAmount;
+    public int minAmount;
+    public int maxAmount;
 }

@@ -77,6 +77,9 @@ TextureImporter:
   - first:
       213: 6360820135067221728
     second: OpenSmallChest_1
+  - first:
+      213: -1885679296142026437
+    second: Wood
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -686,6 +689,27 @@ TextureImporter:
       bones: []
       spriteID: 0ee75d6363c264850800000000000000
       internalID: 6360820135067221728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 136
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b395521cba8b4d5e0800000000000000
+      internalID: -1885679296142026437
       vertices: []
       indices: 
       edges: []

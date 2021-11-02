@@ -4735,6 +4735,9 @@ MonoBehaviour:
   explosionKick: 5
   explosionParticles: {fileID: 3446653252424473726, guid: 78dc5aac5e8f92243979f946f4ac6924, type: 3}
   areaOfEffect: 2
+  objectDamageLayers:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &5473659953203065631
 MonoBehaviour:
   m_ObjectHideFlags: 0

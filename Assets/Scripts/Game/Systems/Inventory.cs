@@ -72,6 +72,79 @@ public class Inventory : MonoBehaviour
     }
 
     /// <summary>
+    /// Drops a loot table.
+    /// </summary>
+    /// <param name="table">The table to be dropped.</param>
+    /// <param name="position">The position it should be dropped.</param>
+    public void DropLootTable(LootTable table, Vector2 position)
+    {
+        if (table.useMinMax)
+        {
+            HandleMinMax(table, position);
+        }
+        else
+        {
+            HandleNormalDrops(table, position);
+        }
+    }
+
+    /// <summary>
+    /// Handle the drops using the minmax system.
+    /// </summary>
+    /// <param name="table">The loot table to be dropped.</param>
+    /// <param name="position">The position it should be dropped.</param>
+    private void HandleMinMax(LootTable table, Vector2 position)
+    {
+        int droppedCounter = Random.Range(table.minRolls, table.maxRolls + 1);
+
+        for (int i = 0; i < droppedCounter; i++)
+        {
+            // Stores the biggest drop rate, this will be the default
+            // if no other objects are dropped.
+            LootTableItem defaultItem = new LootTableItem();
+            defaultItem.chance = 0f;
+
+            bool spawnDefault = true;
+
+            foreach (LootTableItem item in table.drops)
+            {
+                float chance = Random.Range(0f, 100f);
+
+                if (item.chance > defaultItem.chance) defaultItem = item;
+                if (chance > item.chance) continue;
+
+                if (item.useFixedAmount) DropItem(item.item, item.fixedAmount, position);
+                else DropItem(item.item, Random.Range(item.minAmount, item.maxAmount + 1), position);
+                spawnDefault = false;
+            }
+
+            if (spawnDefault)
+            {
+                if (defaultItem.useFixedAmount) DropItem(defaultItem.item, defaultItem.fixedAmount, position);
+                else DropItem(defaultItem.item, Random.Range(defaultItem.minAmount, defaultItem.maxAmount + 1), position);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Handle drops without the minmax system.
+    /// </summary>
+    /// <param name="table">The loot table to be dropped.</param>
+    /// <param name="position">The position it should be dropped.</param>
+    private void HandleNormalDrops(LootTable table, Vector2 position)
+    {
+        foreach (LootTableItem item in table.drops)
+        {
+            float chance = Random.Range(0f, 100f);
+
+            if (chance > item.chance) continue;
+
+            if (item.useFixedAmount) DropItem(item.item, item.fixedAmount, position);
+            else DropItem(item.item, Random.Range(item.minAmount, item.maxAmount + 1), position);
+        }
+    }
+
+    /// <summary>
     /// Drops an item based on its reference.
     /// </summary>
     /// <param name="item">The item</param>

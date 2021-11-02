@@ -929,7 +929,7 @@ MonoBehaviour:
   isCharging: 0
   maxLight: 100
   currentLight: 100
-  decayVelocity: 10
+  decayVelocity: 1
   rechargeVelocity: 2
   currentWave: 0
   display: {fileID: 1994981405}

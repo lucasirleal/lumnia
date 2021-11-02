@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9066cba4679f14aaf6b08b196e7229, type: 3}
+  m_Name: Wood
+  m_EditorClassIdentifier: 
+  itemName: Wood
+  description: A bunch of beams of wood.
+  maxStack: 100
+  rarity: 0
+  click: 0
+  worldArt: {fileID: -1885679296142026437, guid: fc52be6aa8f4cd54db3bc43eefbb4f38, type: 3}
+  inventoryArt: {fileID: -1885679296142026437, guid: fc52be6aa8f4cd54db3bc43eefbb4f38, type: 3}
+  equipedOffset: {x: 0, y: 0}
+  equipType: 0
+  attackType: 0
+  mainAttackDelay: 0
+  damage: 0
