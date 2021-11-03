@@ -8,11 +8,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Settings")]
-    public float movementVelocity;
-    public float runningVelocityMultiplier;
-    public float staminaRechargeVelocity;
-    public float staminaDrainVelocity;
-    public float staminaRechargeTimer;
     public Vector2 inputVelocity;
     [Header("References")]
     public Rigidbody2D playerRB;
@@ -23,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        float movementVelocity = playerStatus.GetVelocity();
+        float runningVelocityMultiplier = playerStatus.GetRunVelocityMultiplier();
+        float staminaDrainVelocity = playerStatus.GetStaminaDrainVelocity();
+        float staminaRechargeTimer = playerStatus.GetStaminaChargeTimer();
+
         // Basic movement input.
         inputVelocity = new Vector2(Input.GetAxis("Horizontal") * movementVelocity, Input.GetAxis("Vertical") * movementVelocity);
 
@@ -56,10 +56,13 @@ public class PlayerMovement : MonoBehaviour
         playerStatus.UpdateStaminaCharging(true);
         staminaRecharging = true;
 
+        float staminaRechargeTimer = playerStatus.GetStaminaChargeTimer();
+
         yield return new WaitForSecondsRealtime(staminaRechargeTimer);
 
         while (playerStatus.currentStamina != playerStatus.maxStamina)
         {
+            float staminaRechargeVelocity = playerStatus.GetStaminaRechargeVelocity();
             playerStatus.UpdateStamina(Time.deltaTime * staminaRechargeVelocity);
             yield return null;
         }

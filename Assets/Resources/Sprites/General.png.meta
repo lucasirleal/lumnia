@@ -83,6 +83,9 @@ TextureImporter:
   - first:
       213: 8685174420496148340
     second: Campfire_Unlit
+  - first:
+      213: 5371203609680185996
+    second: Orange_Circle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -734,6 +737,27 @@ TextureImporter:
       bones: []
       spriteID: 4776bf19e10f78870800000000000000
       internalID: 8685174420496148340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange_Circle
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a8843a9395a8a40800000000000000
+      internalID: 5371203609680185996
       vertices: []
       indices: 
       edges: []

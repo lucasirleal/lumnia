@@ -15,6 +15,7 @@ public class MeleeAttaclAI : MonoBehaviour
     [Header("References")]
     public Transform player;
     public UnityEvent attackFinishedCallback;
+    public UnityEvent attackSuccessfulCallback;
     public EnemyStatus statusHandler;
 
     private void Awake()
@@ -37,6 +38,7 @@ public class MeleeAttaclAI : MonoBehaviour
             Vector2 direction = (player.position - transform.position).normalized;
             player.GetComponent<Rigidbody2D>().AddForce(direction * attackKick, ForceMode2D.Impulse);
             player.GetComponent<PlayerStatus>().UpdateHealth(-statusHandler.damage);
+            attackSuccessfulCallback.Invoke();
         }
 
         yield return new WaitForSecondsRealtime(attackResetTimer);

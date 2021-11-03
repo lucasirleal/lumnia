@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291172ac107014c44ba15b08e922205b, type: 3}
+  m_Name: Plague Herald's Poison
+  m_EditorClassIdentifier: 
+  buffName: Plague Herald's Poison
+  type: 1
+  useFixedTime: 0
+  fixedTime: 0
+  minTimer: 2
+  maxTimer: 5
+  specialParticles: {fileID: 3784830609310183621, guid: 43a47111b0a53b54b80d9417414c16a5, type: 3}

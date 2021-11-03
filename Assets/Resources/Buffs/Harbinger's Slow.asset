@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291172ac107014c44ba15b08e922205b, type: 3}
+  m_Name: Harbinger's Slow
+  m_EditorClassIdentifier: 
+  buffName: Harbinger's Slow
+  type: 0
+  useFixedTime: 1
+  fixedTime: 2
+  minTimer: 0
+  maxTimer: 0
+  specialParticles: {fileID: 130115123610647418, guid: 2a11173ef4b3a3a4e90d41737ff0e5ad, type: 3}
