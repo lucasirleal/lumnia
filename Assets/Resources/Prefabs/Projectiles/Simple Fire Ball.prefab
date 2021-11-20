@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8412552902700442308}
   - component: {fileID: 8412552902700538724}
   - component: {fileID: -792780138289926157}
-  - component: {fileID: 5473659953203065631}
   - component: {fileID: 1685489849495438283}
   - component: {fileID: -2372083629564746569}
+  - component: {fileID: 5952244002732039957}
   m_Layer: 0
   m_Name: Simple Fire Ball
   m_TagString: Untagged
@@ -4738,19 +4738,6 @@ MonoBehaviour:
   objectDamageLayers:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &5473659953203065631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412552902682065826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoDestroy: 0
 --- !u!58 &1685489849495438283
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4788,6 +4775,26 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &5952244002732039957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412552902682065826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b419efe05433848a1d36ee63108eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoDestroy: 0
+  updates:
+  - spriteChildren: {fileID: 0}
+    particleChildren: {fileID: 8412552902700538724}
+    offset: 0
+  - spriteChildren: {fileID: 0}
+    particleChildren: {fileID: 8412552902700538726}
+    offset: 0
 --- !u!1 &8412552902682065828
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,7 +4806,6 @@ GameObject:
   - component: {fileID: 8412552902682093444}
   - component: {fileID: 8412552902700442310}
   - component: {fileID: 8412552902700538726}
-  - component: {fileID: 2260413780573705526}
   m_Layer: 0
   m_Name: CFX4 Sparkles
   m_TagString: Untagged
@@ -9389,19 +9395,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &2260413780573705526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412552902682065828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoDestroy: 0
 --- !u!1 &8555313868958259219
 GameObject:
   m_ObjectHideFlags: 0

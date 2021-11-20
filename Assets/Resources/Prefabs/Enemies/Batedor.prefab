@@ -171,7 +171,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates:
+  - spriteChildren: {fileID: 2548414488903683365}
+    particleChildren: {fileID: 0}
+    offset: 0
+  - spriteChildren: {fileID: 7181668367898778554}
+    particleChildren: {fileID: 0}
+    offset: 1
 --- !u!95 &2548414488903683367
 Animator:
   serializedVersion: 3
@@ -430,6 +436,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  attackSuccessfulCallback:
+    m_PersistentCalls:
+      m_Calls: []
   statusHandler: {fileID: 5479796009277215380}
 --- !u!114 &5479796009277215380
 MonoBehaviour:
@@ -564,7 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates: []
 --- !u!95 &7181668367898778556
 Animator:
   serializedVersion: 3

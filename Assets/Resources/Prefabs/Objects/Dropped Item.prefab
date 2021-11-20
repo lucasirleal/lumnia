@@ -9759,7 +9759,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates:
+  - spriteChildren: {fileID: 6414440250116408982}
+    particleChildren: {fileID: 0}
+    offset: 0
 --- !u!114 &7792951746776459468
 MonoBehaviour:
   m_ObjectHideFlags: 0

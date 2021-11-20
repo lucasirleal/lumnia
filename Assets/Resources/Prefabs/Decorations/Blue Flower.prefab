@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2176598018975264868}
   - component: {fileID: 3715705924976900505}
+  - component: {fileID: -2867604758545484253}
   m_Layer: 0
   m_Name: Blue Flower
   m_TagString: Untagged
@@ -68,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -483502635
-  m_SortingLayer: -2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2438393261465058855, guid: fc52be6aa8f4cd54db3bc43eefbb4f38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -82,3 +83,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2867604758545484253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545763521243918592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b419efe05433848a1d36ee63108eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoDestroy: 1
+  updates:
+  - spriteChildren: {fileID: 3715705924976900505}
+    particleChildren: {fileID: 0}
+    offset: 0

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 1
+  updates: []
 --- !u!1 &4823647643609139102
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   attackResetTimer: 5
   maxPrecisionDeviance: 1
   projectileSpawnOffset: {x: 0.3, y: 0.6}
-  type: 0
+  projectileCount: 1
   player: {fileID: 0}
   chargingDisplay: {fileID: 7474843142014725016}
   projectilePrefab: {fileID: 8412552902682093442, guid: 33938ceaea1755742b91bfe25cf12602, type: 3}
@@ -569,7 +569,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 1
-  offset: 0
+  updates:
+  - spriteChildren: {fileID: 4823647644475935187}
+    particleChildren: {fileID: 0}
+    offset: 0
+  - spriteChildren: {fileID: 4823647643149704024}
+    particleChildren: {fileID: 0}
+    offset: 1
 --- !u!95 &4823647644475935185
 Animator:
   serializedVersion: 3

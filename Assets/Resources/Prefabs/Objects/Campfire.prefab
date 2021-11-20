@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1198822782423666379}
   - component: {fileID: 1198822782409509769}
   - component: {fileID: 1198822782409617961}
-  - component: {fileID: 8881921897947757689}
   m_Layer: 0
   m_Name: CFX4 Sparkles
   m_TagString: Untagged
@@ -4601,19 +4600,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &8881921897947757689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198822782423896811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoDestroy: 0
 --- !u!1 &1198822782423896813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4626,7 +4612,6 @@ GameObject:
   - component: {fileID: 1198822782409509771}
   - component: {fileID: 1198822782409617963}
   - component: {fileID: 1216829626734626492}
-  - component: {fileID: 3452622681034005072}
   - component: {fileID: 8320513172876159620}
   - component: {fileID: 4253891958307032568}
   m_Layer: 0
@@ -9351,19 +9336,6 @@ MonoBehaviour:
   objectDamageLayers:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &3452622681034005072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198822782423896813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoDestroy: 0
 --- !u!58 &8320513172876159620
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9520,8 +9492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b419efe05433848a1d36ee63108eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoDestroy: 1
-  offset: 0
+  autoDestroy: 0
+  updates:
+  - spriteChildren: {fileID: 3036696497633909324}
+    particleChildren: {fileID: 0}
+    offset: 0
 --- !u!1 &3036696498152475759
 GameObject:
   m_ObjectHideFlags: 0

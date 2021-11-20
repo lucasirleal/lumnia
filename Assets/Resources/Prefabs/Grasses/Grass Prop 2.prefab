@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2723762104088204962}
   - component: {fileID: 7086561408189639505}
+  - component: {fileID: 990606921589283607}
   m_Layer: 0
   m_Name: Grass Prop 2
   m_TagString: Untagged
@@ -68,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -483502635
-  m_SortingLayer: -2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 232854747835183443, guid: fc52be6aa8f4cd54db3bc43eefbb4f38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -82,3 +83,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &990606921589283607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218006065295658968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b419efe05433848a1d36ee63108eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoDestroy: 1
+  updates:
+  - spriteChildren: {fileID: 7086561408189639505}
+    particleChildren: {fileID: 0}
+    offset: 0

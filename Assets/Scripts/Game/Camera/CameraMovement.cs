@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 positionToFollow = new Vector3(currentTarget.position.x, currentTarget.position.y, -10f);
+        Vector3 positionToFollow = new Vector3(currentTarget.position.x, currentTarget.position.y, -1000f);
         this.transform.position = positionToFollow;
     }
 }

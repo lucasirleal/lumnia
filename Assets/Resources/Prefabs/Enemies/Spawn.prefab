@@ -377,7 +377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates:
+  - spriteChildren: {fileID: 1479588761870583345}
+    particleChildren: {fileID: 0}
+    offset: 0
 --- !u!95 &1479588761870583347
 Animator:
   serializedVersion: 3

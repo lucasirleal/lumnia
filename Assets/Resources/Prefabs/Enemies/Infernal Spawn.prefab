@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 917576274408814947}
   - component: {fileID: 918577554125471613}
   m_Layer: 0
-  m_Name: Harbinger's Slow
+  m_Name: Flames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4744,13 +4744,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3548411371725187138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3548411372406736560}
   - {fileID: 3548411371322905401}
-  m_Father: {fileID: 3548411373005875181}
+  m_Father: {fileID: 887567600749967264}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3548411371725187166
@@ -4817,7 +4817,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates:
+  - spriteChildren: {fileID: 3548411371725187166}
+    particleChildren: {fileID: 0}
+    offset: 0
 --- !u!95 &3548411371725187164
 Animator:
   serializedVersion: 3
@@ -4921,7 +4924,6 @@ GameObject:
   - component: {fileID: 3548411373005875183}
   - component: {fileID: 3548411373005875180}
   - component: {fileID: 3474027061257420547}
-  - component: {fileID: 3671717214752653845}
   - component: {fileID: 3548411373005874706}
   - component: {fileID: 3548411373005875182}
   - component: {fileID: 6804817274392852463}
@@ -4944,7 +4946,7 @@ Transform:
   m_LocalPosition: {x: 190, y: 190, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3548411371725187165}
+  - {fileID: 887567600749967264}
   - {fileID: 1133484013989254089}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5012,25 +5014,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.4756546}
   serializedVersion: 2
   m_Radius: 0.57831573
---- !u!95 &3671717214752653845
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3548411373005874707}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1e41a3773e78340438eb3c163b0d0fe3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3548411373005874706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5064,7 +5047,7 @@ MonoBehaviour:
         m_CallState: 2
   player: {fileID: 0}
   actorRB: {fileID: 3548411373005875183}
-  actorAnimator: {fileID: 3671717214752653845}
+  actorAnimator: {fileID: 0}
 --- !u!114 &3548411373005875182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5136,3 +5119,54 @@ MonoBehaviour:
   maxDelayTimer: 1
   explosionParticles: {fileID: 3446653252424473726, guid: 78dc5aac5e8f92243979f946f4ac6924, type: 3}
   range: {fileID: 1133484013989254087}
+--- !u!1 &8750997091901388852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 887567600749967264}
+  - component: {fileID: 7892435484999271545}
+  m_Layer: 0
+  m_Name: Animation Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &887567600749967264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750997091901388852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3548411371725187165}
+  m_Father: {fileID: 3548411373005875181}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7892435484999271545
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750997091901388852}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e41a3773e78340438eb3c163b0d0fe3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

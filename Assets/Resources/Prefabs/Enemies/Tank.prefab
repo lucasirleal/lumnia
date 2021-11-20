@@ -171,7 +171,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates:
+  - spriteChildren: {fileID: 1375625573461469034}
+    particleChildren: {fileID: 0}
+    offset: 0
+  - spriteChildren: {fileID: 2377743448117062736}
+    particleChildren: {fileID: 0}
+    offset: 1
+  - spriteChildren: {fileID: 2338961515415576224}
+    particleChildren: {fileID: 0}
+    offset: 2
+  - spriteChildren: {fileID: 240757055568775013}
+    particleChildren: {fileID: 0}
+    offset: 3
 --- !u!95 &1375625573461469032
 Animator:
   serializedVersion: 3
@@ -432,6 +444,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  attackSuccessfulCallback:
+    m_PersistentCalls:
+      m_Calls: []
   statusHandler: {fileID: 8955082669387905243}
 --- !u!114 &8955082669387905243
 MonoBehaviour:
@@ -566,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates: []
 --- !u!95 &1903469684896543760
 Animator:
   serializedVersion: 3
@@ -683,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates: []
 --- !u!95 &6163571042643682552
 Animator:
   serializedVersion: 3
@@ -800,7 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates: []
 --- !u!95 &8229595693485303766
 Animator:
   serializedVersion: 3

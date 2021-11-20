@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3444025201217182738}
   - component: {fileID: 3244170751043669024}
   - component: {fileID: 3244532271473783338}
-  - component: {fileID: 5811823404017404875}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -4587,19 +4586,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &5811823404017404875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3441246360974776384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoDestroy: 1
 --- !u!1 &3441823328867884354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,7 +4597,6 @@ GameObject:
   - component: {fileID: 3446858454673662892}
   - component: {fileID: 3244717938875018610}
   - component: {fileID: 3242794540103033364}
-  - component: {fileID: 4589157181839607671}
   m_Layer: 0
   m_Name: Lines
   m_TagString: FxTemporaire
@@ -9340,19 +9325,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &4589157181839607671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3441823328867884354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoDestroy: 1
 --- !u!1 &3441857522897531160
 GameObject:
   m_ObjectHideFlags: 0
@@ -9365,7 +9337,7 @@ GameObject:
   - component: {fileID: 3244130471011933288}
   - component: {fileID: 3244531674878858884}
   - component: {fileID: 3337820365407695452}
-  - component: {fileID: 1088048279117031043}
+  - component: {fileID: 6979233909328544471}
   m_Layer: 0
   m_Name: Fire Explosion
   m_TagString: FxTemporaire
@@ -14075,7 +14047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
---- !u!114 &1088048279117031043
+--- !u!114 &6979233909328544471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14084,10 +14056,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3441857522897531160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
+  m_Script: {fileID: 11500000, guid: 76b419efe05433848a1d36ee63108eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
+  updates:
+  - spriteChildren: {fileID: 0}
+    particleChildren: {fileID: 3244531674878858884}
+    offset: 0
+  - spriteChildren: {fileID: 0}
+    particleChildren: {fileID: 3242794540103033364}
+    offset: 0
+  - spriteChildren: {fileID: 0}
+    particleChildren: {fileID: 3242972216700030028}
+    offset: 0
+  - spriteChildren: {fileID: 0}
+    particleChildren: {fileID: 3244532271473783338}
+    offset: 0
 --- !u!1 &3442593819667635398
 GameObject:
   m_ObjectHideFlags: 0
@@ -14099,7 +14084,6 @@ GameObject:
   - component: {fileID: 3446473391783727276}
   - component: {fileID: 3243857994261446058}
   - component: {fileID: 3242972216700030028}
-  - component: {fileID: 7556215255667926122}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -18909,19 +18893,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7556215255667926122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3442593819667635398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629b47d5b12d84c4487df4159a48654a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoDestroy: 1
 --- !u!1 &4003153054026971073
 GameObject:
   m_ObjectHideFlags: 0

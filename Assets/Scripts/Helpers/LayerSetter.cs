@@ -9,15 +9,12 @@ public class LayerSetter : MonoBehaviour
 {
     [Header("Settings")]
     public bool autoDestroy = true;
-    public int offset;
+    public List<LayerSetterChild> updates;
 
-    private SpriteRenderer spriteRenderer;
     private Vector2 lastPositionCheck;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
         CalculateOrder();
         if (autoDestroy) { Destroy(this); }
     }
@@ -34,7 +31,22 @@ public class LayerSetter : MonoBehaviour
     /// </summary>
     private void CalculateOrder()
     {
-        spriteRenderer.sortingOrder = (int)-((transform.position.y * 100f) + offset);
-        lastPositionCheck = transform.position;
+        foreach (LayerSetterChild item in updates)
+        {
+            int order = (int)-((transform.position.y) * 100f);
+
+            if (item.spriteChildren)
+            {
+                item.spriteChildren.sortingOrder = order;
+                item.spriteChildren.transform.position = new Vector3(item.spriteChildren.transform.position.x, item.spriteChildren.transform.position.y, -item.offset);
+            }
+            else 
+            { 
+                item.particleChildren.sortingOrder = order;
+                item.particleChildren.transform.position = new Vector3(item.particleChildren.transform.position.x, item.particleChildren.transform.position.y, -item.offset);
+            }
+
+            lastPositionCheck = transform.position;
+        }
     }
 }

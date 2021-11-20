@@ -96,4 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoDestroy: 0
-  offset: 0
+  updates:
+  - spriteChildren: {fileID: 6471688233895476389}
+    particleChildren: {fileID: 0}
+    offset: 0

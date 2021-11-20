@@ -14,7 +14,7 @@ public class ChargeMageAttackAI : MonoBehaviour
     public float attackResetTimer;
     public float maxPrecisionDeviance;
     public Vector2 projectileSpawnOffset;
-    public ProjectileType type;
+    public int projectileCount = 1;
     [Header("References")]
     public Transform player;
     public GameObject chargingDisplay;
@@ -22,10 +22,6 @@ public class ChargeMageAttackAI : MonoBehaviour
     public UnityEvent attackFinishedCallback;
     public EnemyStatus statusHandler;
 
-    public enum ProjectileType
-    {
-        SimpleFireBall
-    }
     private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>().transform;
@@ -45,8 +41,11 @@ public class ChargeMageAttackAI : MonoBehaviour
         yield return new WaitForSecondsRealtime(chargingTime);
         chargingDisplay.SetActive(false);
 
-        Transform projectile = Instantiate(projectilePrefab, (Vector2)transform.position + projectileSpawnOffset, Quaternion.identity);
-        SetUpProjectile(projectile);
+        for (int i = 0; i < projectileCount; i++)
+        {
+            Instantiate(projectilePrefab, (Vector2)transform.position + projectileSpawnOffset, Quaternion.identity).GetComponent<SimpleProjectile>().Construct(GetTarget(), true, statusHandler.damage);
+            yield return new WaitForSecondsRealtime(0.5f);
+        }
 
         yield return new WaitForSecondsRealtime(attackResetTimer);
         attackFinishedCallback.Invoke();
@@ -59,21 +58,5 @@ public class ChargeMageAttackAI : MonoBehaviour
     private Vector2 GetTarget()
     {
         return new Vector2(player.position.x + Random.Range(-maxPrecisionDeviance, maxPrecisionDeviance), player.position.y + Random.Range(-maxPrecisionDeviance, maxPrecisionDeviance));
-    }
-
-    /// <summary>
-    /// Calls the constructor of a projectile based on the enemy type.
-    /// </summary>
-    /// <param name="clone">The projectile.</param>
-    private void SetUpProjectile(Transform clone)
-    {
-        switch (type)
-        {
-            case ProjectileType.SimpleFireBall:
-                clone.GetComponent<SimpleProjectile>().Construct(GetTarget(), true, statusHandler.damage);
-                break;
-            default:
-                break;
-        }
     }
 }
